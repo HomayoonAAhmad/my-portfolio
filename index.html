@@ -4,8 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ha</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- back ground -->
+    <div id="tsparticles"></div>
+    <!-- main -->
+
+    <!-- hero section -->
+    <section class="profile-section">
+      <div class="profile-container">
+        <img
+          class="profile-pic"
+          src="mypics/photo2.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+    </section>
+
+    <!-- about me section -->
+    <section class="hero--container">
+      <div class="hero">
+        <div class="grid hero__content">
+          <h1 class="hero__heading">Hi, I'm Homayoon</h1>
+          <h2>A Passionate Front-End Junior</h2>
+          <p class="hero--paragraph">
+            I'm constantly learning and honing my skills to craft clean,
+            responsive, and interactive web experiences. Seeking new
+            opportunities to bring creativity and code together.
+          </p>
+          <a href="#contact" class="btn btn--hero btn--streched"
+            >Let's Connect</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="about-me">
+      <header class="block__header">
+        <h2>More about me</h2>
+      </header>
+    </section> -->
+  </body>
+  <script>
+    function setupParticlesBackground() {
+      tsParticles.load("tsparticles", {
+        particles: {
+          links: {
+            enable: true,
+            distance: 100,
+            opacity: 0.5,
+          },
+          number: {
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+            value: 55,
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 2,
+            straight: false,
+          },
+          opacity: {
+            value: 0.5,
+          },
+        },
+        retina_detect: true,
+      });
+    }
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2.12.0/tsparticles.preset.links.bundle.min.js"
+    integrity="sha256-Kq9IblhtnUOu75DRD4BIgJ4p4/7JUMMy6eXI/YcTo0c="
+    crossorigin="anonymous"
+    async=""
+    defer=""
+    onload="setupParticlesBackground()"
+  ></script>
 </html>
