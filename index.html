@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ha</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -19,7 +20,7 @@
     <div id="tsparticles"></div>
     <!-- main -->
 
-    <!-- hero section -->
+    <!-- profile pic -->
     <section class="profile-section">
       <div class="profile-container">
         <img
@@ -29,30 +30,44 @@
         />
       </div>
     </section>
-
-    <!-- about me section -->
-    <section class="hero--container">
-      <div class="hero">
-        <div class="grid hero__content">
-          <h1 class="hero__heading">Hi, I'm Homayoon</h1>
-          <h2>A Passionate Front-End Junior</h2>
-          <p class="hero--paragraph">
-            I'm constantly learning and honing my skills to craft clean,
-            responsive, and interactive web experiences. Seeking new
-            opportunities to bring creativity and code together.
-          </p>
-          <a href="#contact" class="btn btn--hero btn--streched"
-            >Let's Connect</a
-          >
-        </div>
+    <!-- hero section -->
+    <section class="container hero--container">
+      <div class="hero__content">
+        <h1 class="hero__heading">Hi, I'm Homayoon</h1>
+        <h2>A Passionate Front-End Junior</h2>
+        <p class="paragraph">
+          I'm constantly learning and honing my skills to craft clean,
+          responsive, and interactive web experiences. Seeking new opportunities
+          to bring creativity and code together.
+        </p>
+        <a href="#contact" class="btn btn--hero btn--streched">Let's Connect</a>
       </div>
     </section>
-
-    <!-- <section class="about-me">
-      <header class="block__header">
-        <h2>More about me</h2>
-      </header>
-    </section> -->
+    <!-- about me header -->
+    <header class="aboutMe__header">
+      <h2>More about me</h2>
+    </header>
+    <!-- about me content -->
+    <section class="container aboutMe--container">
+      <div class="aboutMe">
+        <div class="aboutMe--element">
+          <span class="abouMe--element__icon" style="background: #a7a29e">
+            <img src="images/icons/microchip.svg" alt="electronics" />
+          </span>
+          <div class="aboutMe--element__content">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p class="paragraph">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              harum sit nesciunt quod ipsum ea rem suscipit, nam ratione
+              laudantium!
+            </p>
+          </div>
+        </div>
+        <!-- not here -->
+      </div>
+    </section>
+    <!-- skills chart  -->
+    <section class="container skills"></section>
   </body>
   <script>
     function setupParticlesBackground() {

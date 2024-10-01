@@ -1,17 +1,19 @@
 :root {
   --color-body: #1f1d20;
-  --color-aboutMe: #d7c9b2;
+  --color-background: #d7c9b2;
+  --color-btn-background: #7b7365;
+  --color-line-background: #8eb54b;
+  --color-content-background: #f8f5ec;
 }
 
-*,
-*::after,
-*::before {
+* {
   box-sizing: border-box;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
   line-height: 1.1;
 }
@@ -24,7 +26,7 @@ li {
 }
 
 ::selection {
-  background: var(--color-primary);
+  background: var(--color-line-background);
   color: #fff;
 }
 
@@ -59,10 +61,15 @@ body {
   z-index: 1; /* Keeps all content above particles without extra z-index */
 }
 
-/*grid*/
+.container {
+  background: var(--color-background);
+  border-radius: 25px;
+}
 
-.grid {
-  display: grid;
+.paragraph {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
 /*profile pic*/
@@ -92,21 +99,22 @@ body {
 }
 
 /*hero*/
-.hero--container {
-  max-width: 95vw;
-  margin: 0 auto;
-}
 
-.hero {
-  background: var(--color-aboutMe);
-  padding: 4rem;
-  padding-bottom: 2rem;
-  border-radius: 25px;
+.hero--container {
   display: grid;
-  transform: translateY(5rem);
+  margin: 0 auto 0;
+  max-width: 95vw;
+  padding: 4rem;
+  margin-top: 4rem;
 }
 
 .hero__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero__content .paragraph {
   text-align: center;
 }
 
@@ -120,12 +128,6 @@ body {
   align-self: center;
 }
 
-.hero--paragraph {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
 /*buttons*/
 
 .btn {
@@ -133,7 +135,7 @@ body {
   border: 0;
   cursor: pointer;
   font-weight: 600;
-  font: 2.5rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
   outline: 0;
   padding: 2rem 4vw;
@@ -143,7 +145,7 @@ body {
 }
 
 .btn--hero {
-  background: #7b7365;
+  background: var(--color-btn-background);
   color: #1f1d20;
 }
 
@@ -160,4 +162,135 @@ body {
   .btn {
     font-size: 1.5rem;
   }
+}
+
+/*about me header*/
+
+.aboutMe__header {
+  padding: 5rem 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutMe__header h2 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+
+/*about me line and icon*/
+
+.aboutMe {
+  margin: 2em auto;
+  padding: 2em 0;
+  position: relative;
+  width: 95%;
+}
+
+.aboutMe::before {
+  background: var(--color-line-background);
+  border-radius: 4px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 18px;
+}
+
+.aboutMe--container {
+  width: 95vw;
+  padding: 24px;
+  padding: clamp(8px, 10%, 24px);
+  margin: auto;
+  background: var(--color-background);
+}
+
+.aboutMe--element {
+  position: relative;
+  margin: 2em 0;
+}
+
+.aboutMe--element::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.abouMe--element__icon__color {
+  background: #647a92;
+}
+
+.abouMe--element__icon {
+  border-radius: 50%;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.abouMe--element__icon img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+  position: relative;
+  top: 50%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .aboutMe {
+    margin: 3em auto;
+    width: 90%;
+  }
+  .aboutMe::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+  .aboutMe--element {
+    margin: 4em 0;
+  }
+  .abouMe--element__icon {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+  }
+  .abouMe--element__icon img {
+    width: 30px;
+    height: 30px;
+    margin-left: -14px;
+    margin-top: -15px;
+  }
+}
+
+/*about me content a=container*/
+
+.aboutMe--element__content {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  background: var(--color-content-background);
+  border-radius: 0.25em;
+  margin-left: 60px;
+  padding: 1em;
+  position: relative;
+}
+
+@media only screen and (min-width: 1170px) {
+  .aboutMe--element__content {
+    margin-left: 0;
+    padding: 1.5em;
+    width: 44%;
+  }
+}
+
+/* skills chart */
+.skills {
 }
