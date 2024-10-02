@@ -271,6 +271,12 @@ body {
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .timeline-element:nth-child(2n) .timeline-element-content {
+    float: right;
+  }
+}
+
 /*about me content a=container*/
 
 .aboutMe--element__content {
@@ -283,7 +289,7 @@ body {
   position: relative;
 }
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1024px) {
   .aboutMe--element__content {
     margin-left: 0;
     padding: 1.5em;
