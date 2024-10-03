@@ -1,5 +1,6 @@
 :root {
-  --color-body: #1f1d20;
+  /* --color-body: #1f1d20;*/
+  --color-body: #190019;
   --color-background: #f5ecdc;
   --color-btn-background: #d7c9b2;
   --color-line-background: #74953c;
@@ -74,6 +75,7 @@ body {
   background: var(--color-background);
   border-radius: 25px;
   width: 95vw;
+  margin: auto;
 }
 
 .paragraph {
@@ -132,7 +134,7 @@ body {
 
 .wrapper .icon {
   position: relative;
-  background: #ffffff;
+  background: #fff;
   border-radius: 50%;
   padding: 15px;
   margin: 15px;
@@ -165,6 +167,10 @@ body {
 .wrapper .icon a {
   text-decoration: none; /* Removes default underline */
   color: inherit; /* Ensures the icons keep their original color */
+}
+
+.wrapper .icon a:link {
+  color: inherit;
 }
 
 .wrapper a:hover {
@@ -207,13 +213,6 @@ body {
   color: #fff;
 }
 
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #000;
-  color: #fff;
-}
-
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
@@ -227,13 +226,6 @@ body {
   background: #171515;
   color: #fff;
 }
-
-/* .wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-  background: #cd201f;
-  color: #ffffff;
-} */
 
 /*hero*/
 
@@ -434,5 +426,3 @@ body {
 }
 
 /* skills chart */
-.skills {
-}
