@@ -1,13 +1,22 @@
 :root {
   --color-body: #1f1d20;
-  --color-background: #d7c9b2;
-  --color-btn-background: #7b7365;
-  --color-line-background: #8eb54b;
+  --color-background: #f5ecdc;
+  --color-btn-background: #d7c9b2;
+  --color-line-background: #74953c;
+  /*#8eb54b*/
   --color-content-background: #f8f5ec;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -64,6 +73,7 @@ body {
 .container {
   background: var(--color-background);
   border-radius: 25px;
+  width: 95vw;
 }
 
 .paragraph {
@@ -72,6 +82,11 @@ body {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 85vw;
+  }
+}
 /*profile pic*/
 
 .profile-section {
@@ -98,12 +113,133 @@ body {
   right: 10px;
 }
 
+/*socials*/
+
+.socials {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This centers the wrapper horizontally */
+  position: relative;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 15px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+  text-decoration: none; /* Removes default underline */
+  color: inherit; /* Ensures the icons keep their original color */
+}
+
+.wrapper a:hover {
+  color: inherit; /* Prevent color change on hover */
+}
+
+.wrapper a:visited {
+  color: inherit; /* Ensures the visited links retain the original color */
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background: #24a1de;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #000;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: linear-gradient(-135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #171515;
+  color: #fff;
+}
+
+/* .wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #cd201f;
+  color: #ffffff;
+} */
+
 /*hero*/
 
 .hero--container {
   display: grid;
   margin: 0 auto 0;
-  max-width: 95vw;
   padding: 4rem;
   margin-top: 4rem;
 }
@@ -112,6 +248,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hero__content .paragraph {
@@ -145,12 +282,12 @@ body {
 }
 
 .btn--hero {
-  background: var(--color-btn-background);
+  background: #9b9281;
   color: #1f1d20;
 }
 
 .btn--hero:hover {
-  background: #9b9281;
+  background: var(--color-btn-background);
 }
 
 .btn--streched {
@@ -201,7 +338,6 @@ body {
 }
 
 .aboutMe--container {
-  width: 95vw;
   padding: 24px;
   padding: clamp(8px, 10%, 24px);
   margin: auto;
@@ -267,12 +403,12 @@ body {
     width: 30px;
     height: 30px;
     margin-left: -14px;
-    margin-top: -15px;
+    margin-top: -14px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .timeline-element:nth-child(2n) .timeline-element-content {
+  .aboutMe--element:nth-child(2n) .aboutMe--element__content {
     float: right;
   }
 }
