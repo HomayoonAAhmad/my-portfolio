@@ -1,6 +1,6 @@
 :root {
-  /* --color-body: #1f1d20;*/
-  --color-body: #190019;
+  /*--color-body: #1f1d20;*/
+  --color-body: #111111;
   --color-background: #f5ecdc;
   --color-btn-background: #d7c9b2;
   --color-line-background: #74953c;
@@ -12,6 +12,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *:focus,
@@ -54,7 +56,6 @@ a {
 
 body {
   background: var(--color-body);
-  margin: 0;
 }
 
 #tsparticles {
@@ -72,10 +73,23 @@ body {
 }
 
 .container {
-  background: var(--color-background);
   border-radius: 25px;
   width: 95vw;
-  margin: auto;
+  margin: 0 auto;
+  /* max-width: 1140px; */
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .paragraph {
@@ -95,7 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .profile-container {
@@ -233,7 +247,7 @@ body {
   display: grid;
   margin: 0 auto 0;
   padding: 4rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .hero__content {
@@ -241,6 +255,15 @@ body {
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  color: #fff;
+}
+
+.hero__content .paragraph {
+  line-height: 2.5;
+}
+
+.hero__content .btn {
+  margin-top: 2em;
 }
 
 .hero__content .paragraph {
@@ -261,7 +284,7 @@ body {
 
 .btn {
   border-radius: 40px;
-  border: 0;
+  /* border: 0; */
   cursor: pointer;
   font-weight: 600;
   font-size: 1.5rem;
@@ -274,12 +297,35 @@ body {
 }
 
 .btn--hero {
-  background: #9b9281;
-  color: #1f1d20;
+  background: #fff;
+  color: #000;
+  margin-top: 2rem;
 }
 
 .btn--hero:hover {
-  background: var(--color-btn-background);
+  background: hsla(197, 100%, 63%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+
+  color: #fff;
 }
 
 .btn--streched {
@@ -319,7 +365,25 @@ body {
 }
 
 .aboutMe::before {
-  background: var(--color-line-background);
+  background: linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
   border-radius: 4px;
   content: "";
   height: 100%;
@@ -333,7 +397,7 @@ body {
   padding: 24px;
   padding: clamp(8px, 10%, 24px);
   margin: auto;
-  background: var(--color-background);
+  /* background: var(--color-background); */
 }
 
 .aboutMe--element {
@@ -426,3 +490,245 @@ body {
 }
 
 /* skills chart */
+
+.skills {
+  display: grid;
+  gap: 4rem 2rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skills--container {
+  height: auto;
+  padding: 25px 30px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.skills--heading {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.horizontal-bars .bar {
+  margin: 40px 0;
+}
+.horizontal-bars .bar:first-child {
+  margin-top: 0;
+}
+.horizontal-bars .bar:last-child {
+  margin-bottom: 0;
+}
+.horizontal-bars .bar .info {
+  margin-bottom: 5px;
+}
+.horizontal-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+  color: #fff;
+}
+
+.horizontal-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.horizontal-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #568224;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progress-line.html span {
+  width: 90%;
+}
+.progress-line.css span {
+  width: 60%;
+}
+.progress-line.javascript span {
+  width: 40%;
+}
+.progress-line.python span {
+  width: 35%;
+}
+.progress-line.mysql span {
+  width: 75%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line.html span::after {
+  content: "90%";
+}
+.progress-line.css span::after {
+  content: "60%";
+}
+.progress-line.javascript span::after {
+  content: "40%";
+}
+.progress-line.python span::after {
+  content: "35%";
+}
+.progress-line.mysql span::after {
+  content: "75%";
+}
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #fff;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.radial-bars .radial-bar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+.path {
+  stroke-width: 10;
+  stroke: red;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path-1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.path-2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.path-3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.path-4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.radial-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
