@@ -45,7 +45,7 @@ h2,
 h3,
 h4 {
   font-family: "Montserrat", sans-serif;
-  line-height: 1.1;
+  line-height: 1.5;
 }
 
 p,
@@ -56,7 +56,7 @@ li {
 }
 
 ::selection {
-  background: var(--color-line-background);
+  background: #00a1ff;
   color: #fff;
 }
 
@@ -74,6 +74,7 @@ a {
 
 body {
   background: var(--color-body);
+  overflow-x: hidden;
 }
 
 .skills__text {
@@ -117,8 +118,9 @@ body {
 
 .paragraph {
   font-weight: 500;
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 1.5em;
+  margin-top: 8px;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 1024px) {
@@ -285,8 +287,16 @@ body {
   color: #fff;
 }
 
+.hero__content h1 {
+  text-align: center;
+}
+
 .hero__content .paragraph {
-  line-height: 2.5;
+  margin-top: 1.5rem;
+}
+
+.hero__content .paragraph {
+  line-height: 1.5;
 }
 
 .hero__content .btn {
@@ -310,6 +320,7 @@ body {
 /*buttons*/
 
 .btn {
+  font-family: "Open Sans", sans-serif;
   border-radius: 40px;
   border: 0;
   cursor: pointer;
@@ -774,4 +785,9 @@ body {
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
+}
+
+/* footer */
+.footer {
+  overflow: hidden;
 }

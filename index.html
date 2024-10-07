@@ -6,6 +6,7 @@
     <title>Ha</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -38,7 +39,13 @@
       </div>
     </section>
     <!-- socials -->
-    <section class="socials">
+    <section
+      class="socials"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease"
+      data-aos-easing="ease"
+    >
       <ul class="wrapper">
         <a href="https://t.me/fackoffdude" target="_blank">
           <li class="icon telegram">
@@ -63,64 +70,112 @@
       </ul>
     </section>
     <!-- hero section -->
-    <section class="container glass hero--container">
+    <section
+      class="container glass hero--container"
+      data-aos="flip-up"
+      data-aos-duration="1500"
+      data-aos-easing="ease"
+    >
       <div class="hero__content">
-        <h1 class="hero__heading">Hi, I'm Homayoon</h1>
-        <h2>A Passionate Front-End Junior</h2>
+        <!-- <h1 class="hero__heading">Hi, I'm Homayoon</h1> -->
+        <h1>
+          Everything started from a passion for creation, from the desire to
+          create, similar to the Creator.
+        </h1>
         <p class="paragraph">
-          I'm constantly learning and honing my skills to craft clean,
-          responsive, and interactive web experiences. Seeking new opportunities
-          to bring creativity and code together.
+          Hi, I'm <strong>Homayoon</strong> A Passionate Front-End Junior I'm
+          constantly learning and honing my skills to craft clean, responsive,
+          and interactive web experiences. Seeking new opportunities to bring
+          creativity and code together.
         </p>
-        <a href="#contact" class="btn btn--hero btn--streched">Let's Connect</a>
+        <button onclick="scrollToSection()" class="btn btn--hero btn--streched">
+          Let's Go
+        </button>
       </div>
     </section>
     <!-- about me header -->
-    <header class="aboutMe__header">
+    <header id="section2" class="aboutMe__header">
       <h2>More about me</h2>
     </header>
     <!-- about me content -->
-    <section class="container glass aboutMe--container">
+    <section
+      class="container glass aboutMe--container"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      data-aos-easing="ease"
+    >
       <div class="aboutMe">
         <!-- DO NOT COPY HERE -->
-        <div class="aboutMe--element">
-          <span class="abouMe--element__icon" style="background: #009de0">
-            <img src="images/icons/microchip.svg" alt="electronics" />
-          </span>
-          <div class="aboutMe--element__content">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p class="paragraph">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-              harum sit nesciunt quod ipsum ea rem suscipit, nam ratione
-              laudantium!
-            </p>
-          </div>
-        </div>
-        <!-- ***************** -->
         <div class="aboutMe--element">
           <span class="abouMe--element__icon" style="background: #004791">
             <img src="images/icons/microchip.svg" alt="electronics" />
           </span>
           <div class="aboutMe--element__content">
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>Introduction & Background</h2>
             <p class="paragraph">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-              harum sit nesciunt quod ipsum ea rem suscipit, nam ratione
-              laudantium!
+              “Hi, I’m Homayoon, a passionate front-end developer with a focus
+              on creating dynamic and responsive web applications. I’ve been
+              honing my skills in HTML, CSS, and JavaScript over the past two
+              months, and I’m constantly pushing myself to learn and improve.”
+            </p>
+          </div>
+        </div>
+        <!-- ***************** -->
+        <div class="aboutMe--element">
+          <span class="abouMe--element__icon" style="background: #00a1ff">
+            <img src="images/icons/microchip.svg" alt="electronics" />
+          </span>
+          <div class="aboutMe--element__content">
+            <h2>Passion for Development</h2>
+            <p class="paragraph">
+              “What I love most about web development is the blend of creativity
+              and logic. Bringing a concept to life on the web, while ensuring
+              it's user-friendly and functional, is what excites me about this
+              field.”
             </p>
           </div>
         </div>
         <!-- ****************** -->
         <div class="aboutMe--element">
-          <span class="abouMe--element__icon" style="background: #ff5c00">
+          <span class="abouMe--element__icon" style="background: #ff8c42">
             <img src="images/icons/microchip.svg" alt="electronics" />
           </span>
           <div class="aboutMe--element__content">
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>Skills & Expertise</h2>
             <p class="paragraph">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-              harum sit nesciunt quod ipsum ea rem suscipit, nam ratione
-              laudantium!
+              “My core skills include HTML5, CSS3, JavaScript (ES6+), and
+              responsive design. I’m currently expanding my expertise in
+              React.js and modern web frameworks to build more complex and
+              interactive user interfaces.”
+            </p>
+          </div>
+        </div>
+        <!-- ****************** -->
+        <div class="aboutMe--element">
+          <span class="abouMe--element__icon" style="background: #3ab0b0">
+            <img src="images/icons/microchip.svg" alt="electronics" />
+          </span>
+          <div class="aboutMe--element__content">
+            <h2>Learning Mindset</h2>
+            <p class="paragraph">
+              “I’m always seeking new challenges and opportunities to grow.
+              Whether it's through online courses, coding communities, or
+              personal projects, I stay on top of the latest trends and best
+              practices in front-end development.”
+            </p>
+          </div>
+        </div>
+        <div class="aboutMe--element">
+          <span class="abouMe--element__icon" style="background: #3ddc97">
+            <img src="images/icons/microchip.svg" alt="electronics" />
+          </span>
+          <div class="aboutMe--element__content">
+            <h2>Career Goals</h2>
+            <p class="paragraph">
+              “I’m actively looking for intern or job opportunities where I can
+              contribute my skills and grow as a front-end developer. My goal is
+              to collaborate with like-minded professionals and work on projects
+              that make an impact.”
             </p>
           </div>
         </div>
@@ -132,7 +187,13 @@
       <h2>My skills</h2>
     </header>
     <!-- skills chart  -->
-    <section class="container glass block">
+    <section
+      class="container glass block"
+      data-aos="flip-up"
+      data-aos-duration="1500"
+      data-aos-offset="350"
+      data-aos-easing="ease"
+    >
       <h1 class="skills--heading">Experiences</h1>
       <div class="skills grid--1x2">
         <!-- horizontal -->
@@ -257,7 +318,14 @@
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer class="footer">
+      <div class="container">
+        <p class="paragraph" style="text-align: center">
+          notice that this was my first work and i done it in 15 days i will be
+          glad to have suggestions for elevating and making my portfolio better
+        </p>
+      </div>
+    </footer>
   </body>
   <script>
     function setupParticlesBackground() {
@@ -302,4 +370,15 @@
     defer=""
     onload="setupParticlesBackground()"
   ></script>
+  <script>
+    function scrollToSection() {
+      document
+        .getElementById("section2")
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
