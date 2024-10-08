@@ -630,17 +630,18 @@ body {
 }
 
 .progress-line span::after {
-  position: absolute;
-  padding: 1px 8px;
-  background-color: #fff;
-  color: #000;
-  font-size: 12px;
-  font-weight: 300;
-  border-radius: 3px;
-  top: -28px;
-  right: -20px;
   animation: showText 0.5s 1.5s linear forwards;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
   opacity: 0;
+  padding: 1px 8px;
+  position: absolute;
+  right: -20px;
+  top: -28px;
 }
 .progress-line.html span::after {
   content: "90%";
