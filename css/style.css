@@ -272,7 +272,6 @@ body {
 }
 
 /*hero*/
-
 .hero--container {
   display: grid;
   margin: 0 auto 0;
@@ -316,6 +315,14 @@ body {
 .hero .btn {
   justify-self: center;
   align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-section,
+  .socials,
+  .hero--container {
+    margin-top: 1.5rem;
+  }
 }
 
 /*buttons*/

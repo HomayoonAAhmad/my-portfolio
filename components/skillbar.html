@@ -1,12 +1,19 @@
-<section class="container glass block">
-  <!-- horizontal -->
-  <article class="skills grid--1x2">
-    <div class="skills--container">
-      <h1 class="skills--heading">Horizontal Bars</h1>
+<section
+  class="container glass block"
+  data-aos="flip-up"
+  data-aos-duration="1500"
+  data-aos-offset="350"
+  data-aos-easing="ease"
+>
+  <h1 class="skills--heading">Experiences</h1>
+  <div class="skills grid--1x2">
+    <!-- horizontal -->
+    <div class="skills--container skills__horizontal">
+      <!-- <h1 class="skills--heading">Horizontal Bars</h1> -->
       <div class="horizontal-bars">
         <div class="bar">
           <div class="info">
-            <span>HTML</span>
+            <span class="skills__text">HTML</span>
           </div>
           <div class="progress-line html">
             <span></span>
@@ -14,7 +21,7 @@
         </div>
         <div class="bar">
           <div class="info">
-            <span>CSS</span>
+            <span class="skills__text">CSS</span>
           </div>
           <div class="progress-line css">
             <span></span>
@@ -22,7 +29,7 @@
         </div>
         <div class="bar">
           <div class="info">
-            <span>java script</span>
+            <span class="skills__text">JavaScript</span>
           </div>
           <div class="progress-line javascript">
             <span></span>
@@ -30,7 +37,7 @@
         </div>
         <div class="bar">
           <div class="info">
-            <span>Python</span>
+            <span class="skills__text">Python</span>
           </div>
           <div class="progress-line python">
             <span></span>
@@ -38,51 +45,84 @@
         </div>
         <div class="bar">
           <div class="info">
-            <span>MySQL</span>
+            <span class="skills__text">React</span>
           </div>
-          <div class="progress-line mysql">
+          <div class="progress-line react">
             <span></span>
           </div>
         </div>
       </div>
     </div>
     <!-- Radial -->
-    <div class="skills--container">
-      <h1 class="skills--heading">Radial Bars</h1>
+    <div class="skills--container skills__radial">
+      <!-- <h1 class="skills--heading">Radial Bars</h1> -->
+      <svg style="position: absolute; width: 0; height: 0">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color: hsla(197, 100%, 63%, 1)" />
+            <stop offset="100%" style="stop-color: hsla(294, 100%, 55%, 1)" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <div class="radial-bars">
         <div class="radial-bar">
           <svg x="0px" y="0px" viewBox="0 0 200 200">
             <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+            <circle
+              class="path path-1"
+              cx="100"
+              cy="100"
+              r="80"
+              stroke="url(#grad)"
+            ></circle>
           </svg>
           <div class="percentage">90%</div>
-          <div class="text">Creativity</div>
+          <div class="skills__text">Creativity</div>
         </div>
         <div class="radial-bar">
           <svg x="0px" y="0px" viewBox="0 0 200 200">
             <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+            <circle
+              class="path path-2"
+              cx="100"
+              cy="100"
+              r="80"
+              stroke="url(#grad)"
+            ></circle>
           </svg>
           <div class="percentage">65%</div>
-          <div class="text">Communication</div>
+          <div class="skills__text">Communication</div>
         </div>
         <div class="radial-bar">
           <svg x="0px" y="0px" viewBox="0 0 200 200">
             <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+            <circle
+              class="path path-3"
+              cx="100"
+              cy="100"
+              r="80"
+              stroke="url(#grad)"
+            ></circle>
           </svg>
           <div class="percentage">75%</div>
-          <div class="text">Problem Solving</div>
+          <div class="skills__text">Problem Solving</div>
         </div>
         <div class="radial-bar">
           <svg x="0px" y="0px" viewBox="0 0 200 200">
             <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+            <circle
+              class="path path-4"
+              cx="100"
+              cy="100"
+              r="80"
+              stroke="url(#grad)"
+            ></circle>
           </svg>
           <div class="percentage">85%</div>
-          <div class="text">Teamwork</div>
+          <div class="skills__text">Teamwork</div>
         </div>
       </div>
     </div>
-  </article>
+  </div>
 </section>
