@@ -318,10 +318,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .profile-section,
+  .profile-section {
+    margin-top: 0.5rem;
+  }
   .socials,
   .hero--container {
-    margin-top: 0.5rem;
+    margin-top: 0;
   }
 }
 
