@@ -321,6 +321,15 @@ body {
   .profile-section {
     margin-top: 0.5rem;
   }
+  .profile-container {
+    width: 200px;
+    height: 200px;
+  }
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
   .socials,
   .hero--container {
     margin-top: 0;
