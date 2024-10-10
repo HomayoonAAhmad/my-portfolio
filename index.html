@@ -87,7 +87,10 @@
           and interactive web experiences. Seeking new opportunities to bring
           creativity and code together.
         </p>
-        <button onclick="scrollToSection()" class="btn btn--hero btn--streched">
+        <button
+          onclick="smoothScrollToSection()"
+          class="btn btn--hero btn--streched"
+        >
           Let's Go
         </button>
       </div>
@@ -369,10 +372,31 @@
       onload="setupParticlesBackground()"
     ></script>
     <script>
-      function scrollToSection() {
-        document
-          .getElementById("section2")
-          .scrollIntoView({ behavior: "smooth" });
+      function smoothScrollToSection() {
+        const section = document.getElementById("section2");
+        const targetPosition =
+          section.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // Scroll duration in milliseconds
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
       }
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
