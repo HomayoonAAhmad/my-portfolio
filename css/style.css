@@ -605,9 +605,10 @@ body {
 .horizontal-bars .bar .info span {
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear forwards;
+  /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
   color: #fff;
+  transition: opacity 0.5s ease 0.5s;
 }
 
 .horizontal-bars .bar .progress-line {
@@ -616,9 +617,10 @@ body {
   width: 100%;
   height: 5px;
   /* background-color: #000; */
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  /* animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards; */
   transform: scaleX(0);
   transform-origin: left;
+  transition: transform 1s cubic-bezier(1, 0, 0.5, 1) 1s;
 }
 @keyframes animate {
   100% {
@@ -630,9 +632,10 @@ body {
   background: var(--gradient-primary);
   position: absolute;
   border-radius: 10px;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  /* animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards; */
   transform: scaleX(0);
   transform-origin: left;
+  transition: transform 1s cubic-bezier(1, 0, 0.5, 1) 1.5s;
 }
 .progress-line.html span {
   width: 90%;
@@ -651,8 +654,10 @@ body {
 }
 
 .progress-line span::after {
-  animation: showText 0.5s 1.5s linear forwards;
+  /* animation: showText 0.5s 1.5s linear forwards; */
   background-color: #fff;
+  transition: opacity 0.5s ease 2s;
+  content: attr(data-percent);
   border-radius: 3px;
   color: #000;
   font-family: "Montserrat", sans-serif;
@@ -690,8 +695,9 @@ body {
   border-top-color: #fff;
   top: -10px;
   right: 0;
-  animation: showText 0.5s 1.5s linear forwards;
+  /* animation: showText 0.5s 1.5s linear forwards; */
   opacity: 0;
+  transition: opacity 0.5s ease 2s;
 }
 @keyframes showText {
   100% {
@@ -727,7 +733,8 @@ body {
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
   stroke-linecap: round;
-  animation: animate-bar 1s linear forwards;
+  /* animation: animate-bar 1s linear forwards; */
+  transition: stroke-dashoffset 1s linear;
 }
 @keyframes animate-bar {
   100% {
@@ -741,8 +748,9 @@ body {
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
   stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear 1s;
 }
-.path-1 {
+/* .path-1 {
   animation: animate-path1 1s 1s linear forwards;
 }
 .path-2 {
@@ -774,7 +782,7 @@ body {
   100% {
     stroke-dashoffset: 75;
   }
-}
+} */
 
 .radial-bar .percentage {
   position: absolute;
@@ -784,8 +792,9 @@ body {
   font-size: 17px;
   font-weight: 500;
   color: #fff;
-  animation: showText 0.5s 1s linear forwards;
+  /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
+  transition: opacity 0.5s linear 2s;
   font-family: "Montserrat", sans-serif;
 }
 .radial-bar .skills__text {
@@ -798,8 +807,53 @@ body {
   transform: translateX(-50%);
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear forwards;
+  /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
+  transition: opacity 0.5s linear 2s;
+}
+
+/* Animations triggered by AOS horizontal*/
+.aos-animate .horizontal-bars .bar .info span {
+  opacity: 1;
+}
+
+.aos-animate .horizontal-bars .bar .progress-line {
+  transform: scaleX(1);
+}
+
+.aos-animate .horizontal-bars .bar .progress-line span {
+  transform: scaleX(1);
+}
+
+.aos-animate .progress-line span::before,
+.aos-animate .progress-line span::after {
+  opacity: 1;
+}
+
+/* Animations triggered by AOS radial*/
+.aos-animate .progress-bar {
+  stroke-dashoffset: -1;
+}
+
+.aos-animate .path-1 {
+  stroke-dashoffset: 50;
+}
+
+.aos-animate .path-2 {
+  stroke-dashoffset: 175;
+}
+
+.aos-animate .path-3 {
+  stroke-dashoffset: 125;
+}
+
+.aos-animate .path-4 {
+  stroke-dashoffset: 75;
+}
+
+.aos-animate .percentage,
+.aos-animate .skills__text {
+  opacity: 1;
 }
 
 /* footer */
