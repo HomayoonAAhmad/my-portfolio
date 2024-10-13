@@ -608,7 +608,7 @@ body {
   /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
   color: #fff;
-  transition: opacity 0.5s ease 0.5s;
+  transition: opacity 0.5s ease 1s;
 }
 
 .horizontal-bars .bar .progress-line {
@@ -656,7 +656,7 @@ body {
 .progress-line span::after {
   /* animation: showText 0.5s 1.5s linear forwards; */
   background-color: #fff;
-  transition: opacity 0.5s ease 2s;
+  transition: opacity 0.5s ease 1.5s;
   content: attr(data-percent);
   border-radius: 3px;
   color: #000;
@@ -697,7 +697,7 @@ body {
   right: 0;
   /* animation: showText 0.5s 1.5s linear forwards; */
   opacity: 0;
-  transition: opacity 0.5s ease 2s;
+  transition: opacity 0.5s ease 1.5s;
 }
 @keyframes showText {
   100% {
@@ -794,7 +794,7 @@ body {
   color: #fff;
   /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
-  transition: opacity 0.5s linear 2s;
+  transition: opacity 0.5s linear 1s;
   font-family: "Montserrat", sans-serif;
 }
 .radial-bar .skills__text {
@@ -809,7 +809,7 @@ body {
   font-weight: 500;
   /* animation: showText 0.5s 1s linear forwards; */
   opacity: 0;
-  transition: opacity 0.5s linear 2s;
+  transition: opacity 0.5s linear 1s;
 }
 
 /* Animations triggered by AOS horizontal*/
